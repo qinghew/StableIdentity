@@ -26,11 +26,12 @@ More results can be found in our [Project Page](https://qinghew.github.io/Stable
 
 ## Getting Started
 ### Installation
-- Requirements:
+- Requirements (Only need 9GB VRAM for training):
 ```bash
 conda create -n stableid python=3.8.5
 pip install -r requirements.txt
 ```
+
 - Download pretrained models: [Stable Diffusion v2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1/), [face recognition ViT](https://huggingface.co/jayanta/vit-base-patch16-224-in21k-face-recognition).
 
 - Set the paths of pretrained models as default in the Line94 of train.py or command with 
