@@ -1,0 +1,38 @@
+model:
+  base_learning_rate: 5.0e-03
+  use_celeb: True
+  use_svd: True
+  rm_repeats: True
+  n_components: 512  
+  use_sample_reduce: False
+  n_samples: 513
+  use_flatten: False
+  num_embeds_per_token: 2  
+  target: models.embedding_manager.EmbeddingManagerId
+  params:
+    linear_start: 0.00085
+    linear_end: 0.0120
+    num_timesteps_cond: 1
+    log_every_t: 200
+    timesteps: 1000
+    first_stage_key: image
+    cond_stage_key: caption
+    image_size: 64
+    channels: 4
+    cond_stage_trainable: true   
+    conditioning_key: crossattn
+    monitor: val/loss_simple_ema
+    scale_factor: 0.18215
+    use_ema: False
+    embedding_reg_weight: 0.0
+    unfreeze_model: False
+    model_lr: 0.0
+
+  personalization_config:
+    params:
+      num_embeds_per_token: 2  
+      mlp_depth: 2
+      vit_out_dim: 768
+      token_dim: 1024
+      
+
