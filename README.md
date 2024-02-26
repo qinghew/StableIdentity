@@ -49,7 +49,7 @@ pip install -r requirements.txt
 CUDA_VISIBLE_DEVICES=0 accelerate launch --machine_rank 0 --num_machines 1 --main_process_port 11135 --num_processes 1 --gpu_ids 0 train.py --face_img_path=datasets_face/test_data_demo/00059.png --output_dir="experiments512/save_00059" --resolution=512 --train_batch_size=1 --checkpointing_steps=50 --gradient_accumulation_steps=1 --seed=42 --learning_rate=5e-5 --l_hair_diff_lambda=0.1
 ```
 
-- Train for your test dataset:
+- Train for your test dataset (Preprocess with [FFHQ-Alignment](https://github.com/happy-jihye/FFHQ-Alignment) or cut the headshots):
 ```bash
 bash train_for_testset.sh
 ```
