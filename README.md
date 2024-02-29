@@ -56,13 +56,20 @@ bash train_for_testset.sh
 
 
 ### Test
-We provide three test mode "test a single image with a single prompt", "test a single image with prompts" and "test all images with prompts" in [test.ipynb](https://github.com/qinghew/StableIdentity/blob/main/test.ipynb) for developers to use.
+- **Test StableIdentity**: We provide three test mode "test a single image with a single prompt", "test a single image with prompts" and "test all images with prompts" in [test.ipynb](https://github.com/qinghew/StableIdentity/blob/main/test.ipynb) for developers to use.
 
+- **Test StableIdentity & ControlNet**: Download the OpenPose's `facenet.pth, body_pose_model.pth, body_pose_model.pth` in [ControlNet's Annotators](https://huggingface.co/lllyasviel/Annotators/tree/main) into `models/openpose_models` and the [ControlNet-SD21](https://huggingface.co/thibaud/controlnet-sd21-openpose-diffusers). The test code is [test_with_controlnet_openpose.ipynb](https://github.com/qinghew/StableIdentity/blob/main/test_with_controlnet_openpose.ipynb).
+```bash
+Requirement for ControlNet:
+pip install controlnet_aux
+```
 
 
 ## TODOs
 - [x] Release training and inference codes
-- [ ] Release codes for StableIdentity & Image/Video/3D generation models
+- [x] Release codes for StableIdentity & ControlNet
+- [ ] Release codes for StableIdentity & 3D generation models
+- [ ] Release codes for StableIdentity & Video/3D generation models
 
 
 
