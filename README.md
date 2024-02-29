@@ -5,6 +5,7 @@
 </div>
 
 ## News
+- **[2024.02.29]**: Release codes for StableIdentity & ControlNet codes!
 - **[2024.02.25]**: Release training and inference codes!
 
 
@@ -60,7 +61,7 @@ bash train_for_testset.sh
 
 - **Test StableIdentity & ControlNet**: Download the OpenPose's `facenet.pth, body_pose_model.pth, body_pose_model.pth` in [ControlNet's Annotators](https://huggingface.co/lllyasviel/Annotators/tree/main) into `models/openpose_models` and the [ControlNet-SD21](https://huggingface.co/thibaud/controlnet-sd21-openpose-diffusers). The test code is [test_with_controlnet_openpose.ipynb](https://github.com/qinghew/StableIdentity/blob/main/test_with_controlnet_openpose.ipynb).
 ```bash
-Requirement for ControlNet:
+# Requirement for ControlNet:
 pip install controlnet_aux
 ```
 
@@ -69,7 +70,7 @@ pip install controlnet_aux
 - [x] Release training and inference codes
 - [x] Release codes for StableIdentity & ControlNet
 - [ ] Release codes for StableIdentity & 3D generation models
-- [ ] Release codes for StableIdentity & Video/3D generation models
+- [ ] Release codes for StableIdentity & Video generation models
 
 
 

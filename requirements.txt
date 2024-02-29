@@ -10,3 +10,6 @@ einops
 kornia==0.6.12
 opencv-python
 opencv-contrib-python
+
+# controlnet
+controlnet_aux
