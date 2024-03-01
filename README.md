@@ -5,6 +5,7 @@
 </div>
 
 ## News
+- **[2024.03.01]**: Release codes for **StableIdentity & ModelScopeT2V (Identity-Driven Video Generation)** codes!
 - **[2024.03.01]**: Release codes for **StableIdentity & LucidDreamer (Identity-Driven 3D Generation)** codes!
 - **[2024.02.29]**: Release codes for **StableIdentity & ControlNet** codes!
 - **[2024.02.25]**: Release **training and inference codes**!
@@ -60,6 +61,7 @@ More results can be found in our [Project Page](https://qinghew.github.io/Stable
 ### Test
 - **Test StableIdentity**: We provide three test mode "test a single image with a single prompt", "test a single image with prompts" and "test all images with prompts" in [test.ipynb](https://github.com/qinghew/StableIdentity/blob/main/test.ipynb) for developers to use. The results will be generated in `results/{index}/`.
 
+
 - **Test StableIdentity & ControlNet**: Download the OpenPose's `facenet.pth, body_pose_model.pth, body_pose_model.pth` in [ControlNet's Annotators](https://huggingface.co/lllyasviel/Annotators/tree/main) into `models/openpose_models` and the [ControlNet-SD21](https://huggingface.co/thibaud/controlnet-sd21-openpose-diffusers). 
   ```bash
   # Requirements for ControlNet:
@@ -75,19 +77,30 @@ More results can be found in our [Project Page](https://qinghew.github.io/Stable
   pip install -r requirements_LucidDreamer.txt
   pip install LucidDreamer/submodules/diff-gaussian-rasterization/
   pip install LucidDreamer/submodules/simple-knn/
+  
+  # test 
+  python LucidDreamer/train.py --opt 'LucidDreamer/configs/stableid.yaml'
   ```
-  You also could refer the [LucidDreamer's preparations](https://github.com/EnVision-Research/LucidDreamer/blob/main/resources/Training_Instructions.md). We only edit the code at Line 130 in `LucidDreamer/train.py` and set the `LucidDreamer/configs/stableid.yaml` to insert the learned identity into 3D (LucidDreamer). The 3D video will be generated in `LucidDreamer/output/stableid_{index}/videos/`. 
+  You also could refer the [LucidDreamer's preparations](https://github.com/EnVision-Research/LucidDreamer/blob/main/resources/Training_Instructions.md). We only edit the code at Line 130 in `LucidDreamer/train.py` and set the SD2.1 path and prompts in `LucidDreamer/configs/stableid.yaml` to insert the learned identity into 3D (LucidDreamer). The 3D videos will be generated in `LucidDreamer/output/stableid_{index}/videos/`. 
+
+
+- **Test StableIdentity & ModelScopeT2V**: Download the ModelScopeT2V's pretrained models in [ModelScopeT2V](https://huggingface.co/ali-vilab/modelscope-damo-text-to-video-synthesis/tree/main) into `modelscope_t2v_files/`. 
+  ```bash
+  # Requirement for ModelScopeT2V:
+  pip install -r requirements_modelscope.txt
+  ```
+  The test code is [test_with_modelscope.ipynb](https://github.com/qinghew/StableIdentity/blob/main/test_with_modelscope.ipynb). Since the ModelScope library lacks some functions for tokenizer and embedding layer, you need to replace the `anaconda3/envs/**your_envs**/lib/python3.8/site-packages/modelscope/models/multi_modal/video_synthesis/text_to_video_synthesis_model.py` with `modelscope_t2v_files/text_to_video_synthesis_model.py`. The videos will be generated in `results/{index}/with_modelscope/`.
 
 
 ## TODOs
 - [x] Release training and inference codes
 - [x] Release codes for StableIdentity & ControlNet
 - [x] Release codes for StableIdentity & LucidDreamer for Identity-Driven 3D Generation
-- [ ] Release codes for StableIdentity & ModelScope for Identity-Driven Video Generation
+- [x] Release codes for StableIdentity & ModelScopeT2V for Identity-Driven Video Generation
 
 
 ## Acknowledgements
-Thanks to all the authors of the used repos and pretrained models, let's push AIGC together!
+❤️ Thanks to all the authors of the used repos and pretrained models, let's push AIGC together!
 
 
 ## Citation	

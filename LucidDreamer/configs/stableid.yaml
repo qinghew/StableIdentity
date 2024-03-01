@@ -10,7 +10,7 @@ ModelParams:
   bg_aug_ratio: 0.66
 
 GuidanceParams:
-  model_key: "/18098841002/pretrained_models/models--stabilityai--stable-diffusion-2-1/snapshots/5cae40e6a2745ae2b01ad92ae5043f95f23644d6"
+  model_key: "/home/user/.cache/huggingface/hub/models--stabilityai--stable-diffusion-2-1/snapshots/5cae40e6a2745ae2b01ad92ae5043f95f23644d6"
   text: 'v1* v2* wearing a hat'   # in Fauvism painting style.
   negative: 'unrealistic, blurry, low quality, out of focus, ugly, low contrast, dull, dark, low-resolution, oversaturation.'
   inverse_text: ''
