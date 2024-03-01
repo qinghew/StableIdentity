@@ -1,0 +1,18 @@
+# lucidreamer
+pip==23.3.1
+tqdm
+mediapipe
+Pillow
+fire==0.5.0
+huggingface_hub==0.16.4
+imageio==2.31.1
+imageio-ffmpeg==0.4.8
+PyYAML
+safetensors
+wandb
+accelerate
+triton
+gradio
+plyfile==0.8.1
+git+https://github.com/openai/point-e.git
+

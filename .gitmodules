@@ -1,0 +1,6 @@
+[submodule "LucidDreamer/submodules/diff-gaussian-rasterization"]
+	path = LucidDreamer/submodules/diff-gaussian-rasterization
+	url = https://github.com/YixunLiang/diff-gaussian-rasterization.git
+[submodule "LucidDreamer/submodules/simple-knn"]
+	path = LucidDreamer/submodules/simple-knn
+	url = https://github.com/YixunLiang/simple-knn.git
