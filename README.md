@@ -86,8 +86,11 @@ More results can be found in our [Project Page](https://qinghew.github.io/Stable
 - [ ] Release codes for StableIdentity & ModelScope for Identity-Driven Video Generation
 
 
+## Acknowledgements
+Thanks to all the authors of the used repos and pretrained models, let's push AIGC together!
 
-### Citation	
+
+## Citation	
 
 ```
 @article{wang2024stableidentity,

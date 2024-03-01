@@ -13,8 +13,8 @@ import torchvision.transforms as T
 from typing import List, Optional, Tuple, Union
 from dataclasses import dataclass
 
-from diffusers.utils import BaseOutput, randn_tensor
-
+from diffusers.utils import BaseOutput
+from diffusers.utils.torch_utils import randn_tensor
 
 @dataclass
 # Copied from diffusers.schedulers.scheduling_ddpm.DDPMSchedulerOutput with DDPM->DDIM
