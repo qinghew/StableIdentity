@@ -35,7 +35,7 @@ More results can be found in our [Project Page](https://qinghew.github.io/Stable
   pip install -r requirements_StableIdentity.txt
   ```
 
-- Download pretrained models: [Stable Diffusion v2-1](https://huggingface.co/stabilityai/stable-diffusion-2-1/), [face recognition ViT](https://huggingface.co/jayanta/vit-base-patch16-224-in21k-face-recognition).
+- Download pretrained models: [Stable Diffusion v2-1_512](https://huggingface.co/stabilityai/stable-diffusion-2-1-base/), [face recognition ViT](https://huggingface.co/jayanta/vit-base-patch16-224-in21k-face-recognition).
 
 - Set the paths of pretrained models as default in the Line94 of train.py or command with 
   ```bash
