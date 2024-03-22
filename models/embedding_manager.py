@@ -76,6 +76,7 @@ class EmbeddingManagerId_adain(nn.Module):
         
         if face_img_embeddings is not None:
             residual_embedding = self.face_projection_layer(face_img_embeddings).view(batch_size, self.num_es, self.token_dim)
+            # the AdaIN's norm is on Line 88 of models/id_embedding/meta_net.py
             text_img_embeddings = self.celeb_embeddings_mean + residual_embedding * self.celeb_embeddings_std
             # torch.save(text_img_embeddings, "0217_15.pt")
 
