@@ -5,6 +5,7 @@
 </div>
 
 ## News
+- **[2024.03.22]**: Important Note: The base model is [Stable Diffusion v2-1-base-512](https://huggingface.co/stabilityai/stable-diffusion-2-1-base/).
 - **[2024.03.01]**: Release codes for **StableIdentity & ModelScopeT2V (Identity-Driven Video Generation)** codes!
 - **[2024.03.01]**: Release codes for **StableIdentity & LucidDreamer (Identity-Driven 3D Generation)** codes!
 - **[2024.02.29]**: Release codes for **StableIdentity & ControlNet** codes!
