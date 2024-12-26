@@ -139,6 +139,7 @@ class FaceIdDataset(Dataset):
         '''get masks'''
         self.face_parsing_model = face_parsing_init(face_parsing_model)
         img = Image.open(self.img_list[0]).convert('RGB')
+        img = img.resize((512,512))
         self.face_mask, self.hair_mask = face_parsing_evaluate(self.face_parsing_model, img)     
 
 
@@ -150,6 +151,7 @@ class FaceIdDataset(Dataset):
         example = {}
         ''' image '''
         img_input = Image.open(self.img_list[i]).convert('RGB')
+        img_input = img_input.resize((512,512))
         aligned_img = img_input.crop((64, 70, 440, 446))  # Crop interesting region
 
 
